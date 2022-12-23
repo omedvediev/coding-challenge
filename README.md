@@ -1,4 +1,4 @@
-# Github User Viewer - An Interview Coding Challenge
+# Interview Coding Challenge
 
 This is a basic [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). You have free reign to setup the project in any way you would like. Install as many packages or fonts as you wish. There are no limitations in that regard. The purpose of this exercise is to allow us to get some insight into your coding style, code quality, and organizational skills.
 
@@ -49,6 +49,6 @@ To learn more about Next.js, take a look at the following resources:
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Optional - Deploy this Project on Vercel
+## Bonus Points
 
-If you'd like to make your working example publicly available, you can deploy this project to the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+Use Typescript. Use SASS and CSS modules. Add tests.
