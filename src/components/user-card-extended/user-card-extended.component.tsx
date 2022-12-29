@@ -60,22 +60,29 @@ const UserCardExtended: FC<UserCardExtendedProps> = ({
       <div className={styles.row}>
         <div className={styles.subRow}>
           <b>Biography:</b>
+          &nbsp;
           {biography}
         </div>
         <div className={styles.subRow}>
           <b>Company:</b>
+          &nbsp;
           {company}
         </div>
         <div className={styles.subRow}>
           <b>Twitter:</b>
-          <a
-            target={'_blank'}
-            rel="noreferrer"
-            href={twitter}
-            className={styles.twitterLink}
-          >
-            {twitter}
-          </a>
+          &nbsp;
+          {twitter ? (
+            <a
+              target={'_blank'}
+              rel="noreferrer"
+              href={`https://twitter.com/${twitter}`}
+              className={styles.twitterLink}
+            >
+              @{twitter}
+            </a>
+          ) : (
+            'Not provided.'
+          )}
         </div>
       </div>
     </div>

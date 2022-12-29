@@ -12,4 +12,8 @@
   @media only screen and (min-width: 1024px) {
     grid-template-columns: repeat(3, calc(33.333% - 2rem));
   }
+
+  @media only screen and (min-width: 1440px) {
+    grid-template-columns: repeat(4, calc(25% - 2.25rem));
+  }
 }

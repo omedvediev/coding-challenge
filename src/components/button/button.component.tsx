@@ -12,13 +12,18 @@ import styles from './button.module.scss';
  * @param { ButtonProps } props - ButtonProps defined in the './button.types.ts'
  */
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ onClick, className, children }, ref) => (
+  ({ onClick, className, children, style, variant = 'filled' }, ref) => (
     <button
       ref={ref}
       type={'button'}
       tabIndex={0}
       onClick={onClick}
-      className={classNames(styles.wrapper, className)}
+      style={style}
+      className={classNames(
+        styles.wrapper,
+        variant === 'borderless' && styles.borderless,
+        className
+      )}
     >
       {children}
     </button>

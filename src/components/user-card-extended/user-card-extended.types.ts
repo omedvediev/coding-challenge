@@ -11,7 +11,7 @@ interface UserCardExtendedProps
   extends Pick<BaseHTMLAttributes<HTMLDivElement>, 'className'>,
     Pick<UserCardProps, 'name' | 'gitHubUserName' | 'avatarUrl' | 'id'> {
   readonly address: string;
-  readonly email: string;
+  readonly email?: string;
   readonly publicRepos: number;
   readonly publicGists: number;
   readonly followers: number;

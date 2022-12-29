@@ -22,7 +22,13 @@ const UserCard: FC<UserCardProps> = ({
   gitHubUserName,
   className,
 }) => (
-  <div className={classNames(styles.wrapper, className)}>
+  <div
+    className={classNames(
+      styles.wrapper,
+      (email || address) && styles.noHover,
+      className
+    )}
+  >
     {avatarUrl && (
       <Image
         width={200}
@@ -36,12 +42,14 @@ const UserCard: FC<UserCardProps> = ({
       <h3 className={styles.name}>{name}</h3>
       <span className={styles.gitHubUsername}>{gitHubUserName}</span>
     </div>
-    {email && address ? (
+    {email || address ? (
       <div className={styles.contacts}>
         <span className={styles.address}>{address}</span>
-        <a href={`mailto:${email}`} className={styles.email}>
-          {email}
-        </a>
+        {email && (
+          <a href={`mailto:${email}`} className={styles.email}>
+            {email}
+          </a>
+        )}
       </div>
     ) : (
       <Link href={`/profile?userName=${gitHubUserName}`}>

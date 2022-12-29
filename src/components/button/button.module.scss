@@ -27,3 +27,15 @@
     transition: all 0.2s;
   }
 }
+
+.borderless {
+  border: unset;
+  background-color: transparent;
+  text-transform: unset;
+
+  &:hover {
+    background-color: transparent;
+    color: darken(rgb(50, 50, 255), 10);
+    transition: all 0.2s;
+  }
+}
