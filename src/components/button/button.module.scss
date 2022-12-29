@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  width: fit-content;
+  background-color: rgb(50, 50, 255);
+  color: #fff;
+  border: unset;
+  border-radius: 0.5rem;
+  outline: unset;
+  padding: 0.875rem 1.5rem;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  text-transform: uppercase;
+  transition: all 0.2s;
+
+  &:focus {
+    outline: unset;
+  }
+
+  &:hover {
+    background-color: darken(rgb(50, 50, 255), 10);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  &:active {
+    background-color: darken(rgb(50, 50, 255), 20);
+    transition: all 0.2s;
+  }
+}

@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2.25rem;
+  background-color: #fff;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s;
+
+  .avatar {
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .info {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    row-gap: 0.25rem;
+    align-items: center;
+    justify-content: center;
+
+    .name {
+      margin: 0;
+      max-width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &:hover {
+    border-color: lighten(rgb(100, 150, 255), 10);
+    transition: all 0.3s;
+  }
+}

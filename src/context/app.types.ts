@@ -31,4 +31,4 @@ type Action = {
   readonly payload: State['users'];
 };
 
-export type { Action, State };
+export type { Action, State, User };

@@ -1,10 +1,8 @@
 import Head from 'next/head';
 import { NextPage } from 'next';
 import React from 'react';
-import { httpRequest } from '../services';
+import { UsersList } from '../components';
 import { useAppContext } from '../context';
-import { useEffect } from 'react';
-import { useState } from 'react';
 
 const Home: NextPage = () => {
   const { users } = useAppContext();
@@ -20,7 +18,17 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <h1>Github User Viewer</h1>
+        {users && (
+          <UsersList
+            cards={users.map(({ name, login, id, avatar_url }) => ({
+              id,
+              avatarUrl: avatar_url,
+              name: name ?? 'Not provided',
+              gitHubUserName: login,
+              onViewProfileClick: () => '',
+            }))}
+          />
+        )}
       </main>
     </>
   );
