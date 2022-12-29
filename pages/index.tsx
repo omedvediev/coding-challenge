@@ -1,6 +1,8 @@
 import Head from "next/head";
+import { NextPage } from "next";
+import React from "react";
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <>
       <Head>
@@ -16,4 +18,6 @@ export default function Home() {
       </main>
     </>
   );
-}
+};
+
+export default Home;
