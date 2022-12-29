@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { DetailedUser } from '../components/user-card-extended/user-card-extended.types';
 import Head from 'next/head';
@@ -15,23 +15,23 @@ const Profile: NextPage = () => {
 
   const [user, setUser] = useState<DetailedUser>();
 
-  const getCurrentUser = useCallback(async () => {
-    if (query.userName) {
-      try {
-        const { userName } = query;
-        const response = await httpRequest({ url: `/${userName}` });
-
-        response && setUser(response);
-      } catch (error) {
-        toast.error('Something went wrong...');
-        console.info(error);
-      }
-    }
-  }, []);
-
   useEffect(() => {
+    const getCurrentUser = async () => {
+      if (query.userName) {
+        try {
+          const { userName } = query;
+          const response = await httpRequest({ url: `/${userName}` });
+
+          response && setUser(response);
+        } catch (error) {
+          toast.error('Something went wrong...');
+          console.info(error);
+        }
+      }
+    };
+
     !user && getCurrentUser();
-  }, [query, user, getCurrentUser]);
+  }, [query, user]);
 
   useEffect(() => {
     console.log(user);
