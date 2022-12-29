@@ -1,8 +1,14 @@
-import Head from "next/head";
-import { NextPage } from "next";
-import React from "react";
+import Head from 'next/head';
+import { NextPage } from 'next';
+import React from 'react';
+import { httpRequest } from '../services';
+import { useAppContext } from '../context';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 const Home: NextPage = () => {
+  const { users } = useAppContext();
+
   return (
     <>
       <Head>
